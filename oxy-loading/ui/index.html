@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXY Loading Screen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="custom-cursor" id="custom-cursor"></div>
+    
+    <div class="main-container">
+        <!-- YouTube video arka plan için div -->
+        <div id="video-background">
+            <div id="player"></div>
+            <div class="overlay"></div>
+        </div>
+        
+        <!-- Ana içerik -->
+        <div class="content-wrapper">
+            <!-- Sol panel -->
+            <div class="left-panel">
+                <div class="logo-section">
+                    <img src="img/logo.png" alt="Server Logo" class="logo">
+                    <h1 class="server-name" id="server-name">OXY ROLEPLAY</h1>
+                </div>
+                
+                <div class="loading-section">
+                    <div class="loading-bar-container">
+                        <div class="loading-bar" id="loading-bar"></div>
+                        <div class="loading-percentage" id="loading-percentage">0%</div>
+                    </div>
+                    <div class="loading-text">
+                        <span id="loading-message">Sunucuya bağlanılıyor</span>
+                        <span class="dots"><span>.</span><span>.</span><span>.</span></span>
+                    </div>
+                </div>
+                
+                <div class="updates-section" id="updates-section">
+                    <div class="section-title">
+                        <i class="fas fa-newspaper"></i>
+                        <h2>SON GÜNCELLEMELER</h2>
+                    </div>
+                    <div class="updates-container" id="updates-container">
+                        <!-- Güncellemeler config'den buraya eklenecek -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sağ panel -->
+            <div class="right-panel">
+                <div class="tabs-container">
+                    <div class="tabs-header">
+                        <div class="tab active" data-tab="news">HABERLER</div>
+                        <div class="tab" data-tab="rules">KURALLAR</div>
+                        <div class="tab" data-tab="staff">EKİP</div>
+                        <div class="tab" data-tab="keys">TUŞLAR</div>
+                    </div>
+                    
+                    <div class="tabs-content">
+                        <div class="tab-content active" id="news-content">
+                            <!-- Haberler config'den buraya eklenecek -->
+                        </div>
+                        <div class="tab-content" id="rules-content">
+                            <!-- Kurallar config'den buraya eklenecek -->
+                        </div>
+                        <div class="tab-content" id="staff-content">
+                            <!-- Ekip listesi config'den buraya eklenecek -->
+                        </div>
+                        <div class="tab-content" id="keys-content">
+                            <!-- Klavye kısayolları config'den buraya eklenecek -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Müzik çalar -->
+        <div class="music-player">
+            <div class="music-info">
+                <i class="fas fa-music"></i>
+                <span class="music-title">Arkaplan Müziği</span>
+            </div>
+            <div class="music-controls">
+                <button id="play-pause-btn" class="music-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="mute-btn" class="music-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="social-links" id="social-links">
+                <!-- Sosyal medya linkleri config'den buraya eklenecek -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Önce config.js'i yükleyin -->
+    <script src="config.js"></script>
+    <!-- Sonra YouTube API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- En son ana script -->
+    <script src="script.js"></script>
+</body>
+</html>
